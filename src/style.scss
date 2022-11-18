@@ -1,0 +1,266 @@
+$orangeRed: #FF4500;
+$yellowGold:#FFD700;
+
+
+.app{
+    display: flex;
+    justify-content: center;
+    .container{
+        width: 1024px;
+
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        //LOGIN & REGISTER
+        .auth{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $orangeRed;
+
+            h1{
+                font-size: 3rem;
+                color: $yellowGold;
+                margin-bottom: 1.30rem;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 3.12rem;
+                background-color: white;
+                width: 12.5rem;
+                gap: 1.25rem;
+
+                input{
+                    padding: 0.62rem;
+                    border: none;
+                    border-bottom: 1px solid grey;
+                }
+
+                button{
+                    padding: 0.62rem;
+                    border: none;
+                    background-color: $yellowGold;
+                    cursor: pointer;
+                    font-size: 1rem;
+                }
+
+                p{
+                    font-size: 0.8rem;
+                    color: red;
+                    text-align: center;
+                }
+
+                span{
+                    font-size: 0.8rem;
+                    text-align: center;
+                }
+            }
+        }//fin de auth
+
+         //NAVBAR
+         .navbar{
+              .container{
+                padding: .63rem 0rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .logo{
+                    img{
+                        width: 15rem;
+                        height: auto;
+                    }
+                }
+                .links{
+                    display: flex;
+                    align-items: center;
+                    gap: .63rem;
+
+                    h6{
+                        font-size: 1rem;
+                        //font-weight: 300;
+                    }
+
+                    span{
+                        cursor: pointer;
+                    }
+
+                    .write{
+                        background-color: $orangeRed;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        border: 1px solid white;
+
+                        &:hover{
+                            color: $orangeRed;
+                            background-color: white;
+                            border: 1px solid $orangeRed;
+                        }
+                    }
+                }
+              }//fin de navbar  
+        }
+
+        //FOOTER
+        footer{
+            margin-top: 6.25rem;
+            padding: 1.25rem;
+            background-color: $orangeRed;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            border-radius: 1rem;
+            img{
+                width: 15rem;
+                height: auto;
+            }
+        }//fin del footer
+
+        //HOME
+        .home{
+            
+            .posts{
+                margin-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                gap: 9rem;
+
+                .post{
+                    display: flex;
+                    gap: 6.25rem;
+
+                    &:nth-child(2n+1){ //significa que si es un numero impar
+                        flex-direction: row-reverse;
+                    }
+
+                    .img{
+                        flex: 2;
+                        position: relative;
+
+                        &::after{
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background-color: $orangeRed;
+                            position: absolute;
+                            top: 1.25rem;
+                            left: -1.25rem;
+                            z-index: -1;
+                        }
+
+                        img{
+                            width: 100%;
+                          //  height: auto;
+                            max-height: 25rem;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .content{
+                        flex: 3;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h1{
+                            font-size: 3rem;
+                        }
+                        p{
+                            font-size: 1rem;
+                        }
+                        button{
+                            width: max-content;
+                            padding: .6rem 1.25rem;
+                            cursor: pointer;
+                            background-color: white;
+                            border: 1px solid $orangeRed;
+                            color: $orangeRed;
+
+                            &:hover{
+                                border:  1px solid white;
+                                background-color: $yellowGold;
+                                color: black;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }//fin de home
+
+        //SINGLE
+        .single{
+            display: flex;
+            gap: 3rem;
+           
+
+            .content{
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                img{
+                    width: 100%;
+                    height: 19rem;
+                    object-fit: cover;
+                }
+                .user{
+                    display: flex;
+                    align-items: center;
+                    gap: .62rem;
+                    font-size: .9rem;
+                    img{
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+
+                    span{
+                        font-weight: bold;
+                    }
+
+                    .edit{
+                        display: flex;
+                        gap: .3rem;
+    
+                        img{
+                            width: 1.50rem;
+                            height: 1.50rem;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                h1{
+                    font-size: 2.6rem;
+                    color: #333;
+                }
+
+                p{
+                    text-align: justify;
+                    line-height: 1.9rem;
+                }
+
+            }
+
+            .menu{
+                flex: 2;
+            }
+        }//fin de single
+
+    }//fin container
+}//fin app
