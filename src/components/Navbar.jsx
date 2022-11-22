@@ -25,7 +25,7 @@ const Navbar = () => {
           <Link className='link' to="/?cat=kpop">
             <h6>Kpop</h6>
           </Link>
-          <Link className='link' to="/?cat=game">
+          <Link className='link' to="/?cat=gamer">
             <h6>Gamers</h6>
           </Link>
           <span>Fernando</span>
