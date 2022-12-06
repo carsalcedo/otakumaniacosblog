@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react';
-import {Link} from "react-router-dom";
+import { useState  } from 'react';
+import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
@@ -10,6 +10,10 @@ const Register = () => {
       password:""
     });
 
+    const [err, setErr] = useState(null);
+
+    const navigate = useNavigate();
+
     const handleChange = e =>{
       setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     }
@@ -17,17 +21,16 @@ const Register = () => {
     const handleSubmit = async e =>{
         e.preventDefault()
         try {
-          const res = await axios.post("/auth/register", inputs);
-          console.log(res);
+           await axios.post("/auth/register", inputs);
+           navigate("/login")
         } catch (err) {
-            console.log(err)
-            //quede en hora 1:17:00
+            setErr(err.response.data);
         }
 
        
     }
 
-
+   
   return (
       <div className='auth'>
       <h1>Registrarse</h1>
@@ -36,7 +39,7 @@ const Register = () => {
         <input type="email" placeholder='email' name="email" required onChange={handleChange}/>
         <input type="password" placeholder='password' name="password" required onChange={handleChange}/>
         <button onClick={handleSubmit}>Listo</button>
-        <p>Hay un problema</p>
+        {err && <p>usuario o correo ya existente</p> } 
         <span>¿ya tienes una cuenta? <Link to="/login">Login</Link></span>
       </form>
     </div>
