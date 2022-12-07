@@ -11,27 +11,32 @@ const Navbar = () => {
     <div className='navbar'>
       <div className='container'>
         <div className='logo'>
-          <img src={Logo} alt="OtakuManaicos" />
+          <Link to="/">
+            <img src={Logo} alt="OtakuManaicos" />
+          </Link>
         </div>
         <div className='links'>
-          <Link className='link' to="/?cat=art">
+          <Link className='link' to="/?categories=art">
             <h6>Arte</h6>
           </Link>
-          <Link className='link' to="/?cat=evento">
+          <Link className='link' to="/?categories=evento">
             <h6>Eventos</h6>
           </Link>
-          <Link className='link' to="/?cat=show">
+          <Link className='link' to="/?categories=show">
             <h6>shows</h6>
           </Link>
-          <Link className='link' to="/?cat=concurso">
+          <Link className='link' to="/?categories=concurso">
             <h6>Concursos</h6>
           </Link>
-          <Link className='link' to="/?cat=kpop">
+          <Link className='link' to="/?categories=kpop">
             <h6>Kpop</h6>
           </Link>
-          <Link className='link' to="/?cat=gamer">
+          <Link className='link' to="/?categories=gamer">
             <h6>Gamers</h6>
           </Link>
+        </div>
+
+        <div className='links'>
           <span>{currentUser?.username}</span>
           {currentUser 
           ? (
@@ -43,6 +48,7 @@ const Navbar = () => {
             <Link to="/write" className='link'>Postear</Link>
           </span>
         </div>
+        
       </div>
     </div>
   )

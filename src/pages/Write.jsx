@@ -33,28 +33,28 @@ const Write = () => {
         <div className="item">
           <h1>Categoria</h1>
           <div className="cat">
-            <input type="radio" name="cat" id="art" value="art" />
+            <input type="radio" name="categories" id="art" value="art" />
             <label htmlFor="art">Arte</label>
           </div>
           <div className="cat">
-            <input type="radio" name="cat" id="evento" value="evento" />
-            <label htmlFor="art">Eventos</label>
+            <input type="radio" name="categories" id="evento" value="evento" />
+            <label htmlFor="evento">Eventos</label>
           </div>
           <div className="cat">
-            <input type="radio" name="cat" id="show" value="show" />
-            <label htmlFor="art">Shows</label>
+            <input type="radio" name="categories" id="show" value="show" />
+            <label htmlFor="show">Shows</label>
           </div>
           <div className="cat">
-            <input type="radio" name="cat" id="concurso" value="concurso" />
-            <label htmlFor="art">Concursos</label>
+            <input type="radio" name="categories" id="concurso" value="concurso" />
+            <label htmlFor="concurso">Concursos</label>
           </div>
           <div className="cat">
-            <input type="radio" name="cat" id="kpop" value="kpop" />
-            <label htmlFor="art">Kpop</label>
+            <input type="radio" name="categories" id="kpop" value="kpop" />
+            <label htmlFor="kpop">Kpop</label>
           </div>
           <div className="cat">
-            <input type="radio" name="cat" id="gamer" value="gamer" />
-            <label htmlFor="art">Gamers</label>
+            <input type="radio" name="categories" id="gamer" value="gamer" />
+            <label htmlFor="gamer">Gamers</label>
           </div>
         </div>
       </div>
