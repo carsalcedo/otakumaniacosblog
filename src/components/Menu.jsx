@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Menu = () => {
-
+const Menu = ({categories}) => {
+  //quede en hora 2:00:00
     const posts = [
         {
           id: 1,
