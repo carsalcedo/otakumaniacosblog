@@ -231,7 +231,8 @@ body{
 
                 img{
                     width: 100%;
-                    height: 19rem;
+                    //height: auto;
+                    height: 25rem;
                     object-fit: cover;
                 }
                 .user{
@@ -364,6 +365,14 @@ body{
                     font-size: .8rem;
                     color: #555;
                     gap: .5rem;
+
+                    .cargarImgB{
+                        cursor: pointer;
+                        color: $orangeRed;
+                        background-color: white;
+                        border: 1px solid $orangeRed;
+                        padding: .2rem .3rem;
+                    }
 
                     h1{
                         font: 1.25rem;

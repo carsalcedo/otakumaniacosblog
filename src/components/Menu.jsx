@@ -24,7 +24,7 @@ const Menu = ({categories}) => {
         <h1>Tambien te puede interesar</h1>
         {posts.map(post =>(
             <div className="post" key={post.id}>
-                <img src={post.img} alt={post.title} />
+                <img src={`../upload/${post?.img}`} alt={post.title} />
                 <h2>{post.title}</h2>
                 <Link className='link' to={`/post/${post.id}`}>
                  <button>Leer mas</button>
