@@ -1,11 +1,23 @@
 import Logo from "../img/logo.png"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
 
 const Navbar = () => {
 
   const {currentUser, logout} = useContext(AuthContext);
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async e =>{
+    e.preventDefault()
+    try {
+      await logout()
+      navigate("/")
+    } catch (err) {
+        console.log(err)
+    }  
+}
 
   return (
     <div className='navbar'>
@@ -40,13 +52,17 @@ const Navbar = () => {
           <span>{currentUser?.username}</span>
           {currentUser 
           ? (
-             <span onClick={logout}>Salir</span>) 
+             <span onClick={handleSubmit}>Salir</span>) 
           : 
             (<Link className="link" to="/login">Iniciar</Link>
           )}
-          <span className='write'>
-            <Link to="/write" className='link'>Postear</Link>
-          </span>
+
+          {currentUser && 
+            <span className='write'>
+              <Link to="/write" className='link'>Postear</Link>
+            </span>
+          }
+          
         </div>
         
       </div>
