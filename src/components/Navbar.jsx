@@ -2,12 +2,24 @@ import Logo from "../img/logo.png"
 import { Link, useNavigate } from 'react-router-dom'
 import { useContext } from 'react';
 import { AuthContext } from '../context/authContext';
+import { useState } from "react";
 
 const Navbar = () => {
 
   const {currentUser, logout} = useContext(AuthContext);
+  const [nav, setNav] = useState(false);
 
   const navigate = useNavigate();
+
+  const changeB = () =>{
+    if(window.scrollY >= 80){
+      setNav(true);
+    }else{
+      setNav(false);
+    }
+  }
+
+  window.addEventListener('scroll', changeB)
 
   const handleSubmit = async e =>{
     e.preventDefault()
@@ -20,8 +32,8 @@ const Navbar = () => {
 }
 
   return (
-    <div className='navbar'>
-      <div className='container'>
+    <div className={nav ? "navbarActive" : "navbar"}>
+      <div className="container">
         <div className='logo'>
           <Link to="/">
             <img src={Logo} alt="OtakuManaicos" />

@@ -40,7 +40,7 @@ const Login = () => {
             <img src="https://i.postimg.cc/wTdWDmWD/24.jpg" alt="otakumaniacos"/>
         </div>
 
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
             <h3>Bienvenidos a</h3>
             <img src={logo} alt="otakumaniacos"/>
             <p className="p1">Blog oficial de OtakuManiacos para mantenerte informado acerca de todo lo relacionado a eventos y actividades del mundo animé, kpop y videojuegos en tu localidad</p>
@@ -54,7 +54,7 @@ const Login = () => {
                 <input type="password" className="inputField" placeholder="password" name="password" required onChange={handleChange}/>
             </div>
 
-            <button type="submit" onClick={handleSubmit}>Iniciar Sesion</button>
+            <button type="submit">Iniciar Sesion</button>
             {err && <p>{err}</p>}
             <span>¿No tienes una cuenta? <Link className='registerLink' to="/Register">Registrarse</Link></span>
 

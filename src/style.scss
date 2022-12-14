@@ -179,57 +179,86 @@ body{
                         }
                     }
                 }//fin del form
-        }
-
-           /* h1{
-                font-size: 3rem;
-                color: $yellowGold;
-                margin-bottom: 1.30rem;
             }
-
-            form{
-                display: flex;
-                flex-direction: column;
-                padding: 3.12rem;
-                background-color: white;
-                width: 15.5rem;
-                gap: 1.25rem;
-
-                input{
-                    padding: 0.62rem;
-                    border: none;
-                    border-bottom: 1px solid grey;
-                }
-
-                button{
-                    padding: 0.62rem;
-                    border: none;
-                    background-color: $yellowGold;
-                    cursor: pointer;
-                    font-size: 1rem;
-                }
-
-                p{
-                    font-size: 0.8rem;
-                    color: red;
-                    text-align: center;
-                }
-
-                span{
-                    font-size: 0.8rem;
-                    text-align: center;
-                }
-            }*/
         }//fin de auth
 
          //NAVBAR
-         .navbar{
+         .navbarActive{
+            position: fixed;
+            z-index: 2;
             margin-bottom: 2rem;
-              .container{
-                padding: .63rem 0rem;
+            background-color: $orangeRed;
+            border-radius: 1rem;
+
+            .container{
+                padding: .63rem 1rem;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+               // background-color: $orangeRed;
+                border-radius: 1rem;}
+                .logo{
+                    img{
+                        width: 15rem;
+                        height: auto;
+                    }
+                }
+                .links{
+                    display: flex;
+                    align-items: center;
+                    gap: .63rem;
+
+                    h6{
+                        font-size: 1rem;
+                        //font-weight: 300;
+                        &:hover{
+                            color: $yellowGold;
+                        }
+                    }
+
+                    span{
+                        cursor: pointer;
+                        &:hover{
+                            color: $yellowGold;
+                        }
+                    }
+
+                    .write{
+                        
+                        color: $orangeRed;
+                        background-color: white;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        border: 1px solid white;
+
+                        &:hover{
+                            color: black;
+                            background-color: $yellowGold;
+                            border: 1px solid $orangeRed;
+                        }
+                    }
+                }
+         }
+
+         .navbar{
+            position: fixed;
+            z-index: 2;
+            margin-bottom: 2rem;
+            border-radius: 1rem;
+              
+              .container{
+                padding: .63rem 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+               // background-color: $orangeRed;
+                border-radius: 1rem;}
+
 
                 .logo{
                     img{
@@ -245,14 +274,22 @@ body{
                     h6{
                         font-size: 1rem;
                         //font-weight: 300;
+                        &:hover{
+                            color: $yellowGold;
+                        }
                     }
 
                     span{
                         cursor: pointer;
+                        &:hover{
+                            color: $yellowGold;
+                        }
                     }
 
                     .write{
-                        background-color: $orangeRed;
+                        
+                        color: $orangeRed;
+                        background-color: white;
                         width: 3rem;
                         height: 3rem;
                         border-radius: 50%;
@@ -263,14 +300,14 @@ body{
                         border: 1px solid white;
 
                         &:hover{
-                            color: $orangeRed;
-                            background-color: white;
+                            color: black;
+                            background-color: $yellowGold;
                             border: 1px solid $orangeRed;
                         }
                     }
                 }
-              }//fin de navbar  
-        }
+                
+        }//fin de navbar
 
         //FOOTER
         footer{
@@ -290,7 +327,7 @@ body{
 
         //HOME
         .home{
-            
+            margin-top: 7rem;
             .posts{
                 margin-top: 3rem;
                 display: flex;
@@ -366,7 +403,7 @@ body{
         .single{
             display: flex;
             gap: 3rem;
-           
+            margin-top: 7rem;
 
             .content{
                 flex: 5;
@@ -466,7 +503,7 @@ body{
 
         //WRITE
         .add{
-            margin-top: 1.25rem;
+            margin-top: 7rem;
             display: flex;
             gap: 1.25rem;
             

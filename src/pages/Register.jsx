@@ -41,7 +41,7 @@ const Register = () => {
                 <img src="https://i.postimg.cc/wTdWDmWD/24.jpg" alt="otakumaniacos"/>
             </div>
 
-            <form className="form">
+            <form className="form" onSubmit={handleSubmit}>
                 <h3>Registrate a</h3>
                 <img src={logo} alt="otakumaniacos"/>
                 <p className="p1">Blog oficial de OtakuManiacos para mantenerte informado acerca de todo lo relacionado a eventos y actividades del mundo animé, kpop y videojuegos en tu localidad</p>
@@ -59,7 +59,7 @@ const Register = () => {
                     <input type="password" className="inputField" placeholder="password" name="password" required onChange={handleChange}/>
                 </div>
 
-                <button type="submit" onClick={handleSubmit}>Listo</button>
+                <button type="submit">Listo</button>
                 {err && <p>usuario o correo ya existente</p> } 
                 <span>¿ya tienes una cuenta? <Link className='registerLink' to="/login">Login</Link></span>
 
