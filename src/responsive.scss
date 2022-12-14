@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+$orangeRed: #FF4500;
+$yellowGold:#FFD700;
+
+@media (max-width: 960px){
+
+    .app{
+        .container{
+            width: 900px;
+        }
+    }
+   
+}
+
+@media (max-width: 900px){
+    .app{
+        .container{
+            width: 820px;
+            .navbarActive{
+                  .container{
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $orangeRed;  
+                }         
+            }
+            .navbar{
+                  .container{
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;  
+                }        
+            }//FN DE NAVBAER
+
+            .home{
+                margin-top: 10rem;
+            }
+            .single{
+                margin-top: 10rem;
+            }
+            .add{
+                margin-top: 10rem;
+            }
+
+        }//FIN DE CONTAINER
+    }//FIN DE APP
+   
+}
+
+
+@media (max-width: 768px){
+    .app{
+        .container{
+            width: 680px;
+            //LOGIN & REGISTER
+            .auth{
+                .login{
+                    height: 90vh;
+                   .pic{
+                    display: none;
+                   }
+                   .form{
+                    height: 100%;
+                    width: auto;
+                    padding: 1.9rem;
+                   }
+                }
+            }//fin de AUTH
+            footer{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 1rem;
+                img{
+                    width: 15rem;
+                    height: auto;
+                    margin-bottom: .8rem;
+                }
+            }//fin del footer
+
+            .home{
+                .posts{
+                    padding: 0 1rem;
+                    .post{
+                        display: grid;
+                        gap: 6rem;
+                        &:nth-child(2n+1){ //significa que si es un numero impar
+                            grid-column: auto;
+                        }
+                    }
+                }
+            }//FIN DE HOMBE
+
+            .single{
+                display: grid;
+                padding: 0 1rem;
+            }//FIN DE HOMBE
+
+            .add{
+                display: grid;
+                padding: 0 1rem;
+            }//FIN DE HOMBE
+
+        }//FIN DE CONTAINER
+    }
+}
+
+@media (max-width: 576px){
+    .app{
+        .container{
+            width: 400px;
+        }
+    }
+}
