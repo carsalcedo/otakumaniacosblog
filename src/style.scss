@@ -13,8 +13,28 @@ $yellowGold:#FFD700;
     //font-family: Montserrat;
   }
 
+  html{
+    // font-size: 62.5%;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
+     scroll-padding-top: 8.5rem;
+ 
+     &::-webkit-scrollbar{
+         width: 1rem;
+     }
+ 
+     &::-webkit-scrollbar-track{
+         background: #F5F5F5;
+     }
+     &::-webkit-scrollbar-thumb{
+         background: linear-gradient(135deg, #ffe100 0, #ffd000 10%, #ffbd00 20%, #ffa900 30%, #ff9214 40%, #f37b1f 50%, #e36526 60%, #d3512b 70%, #c64030 80%, #ba3135 90%, #af243a 100%);
+         border-radius: 5rem;
+     }
+ }
+
 body{
-    background-color: #FFFAFA;
+    background-color: linear-gradient(135deg, #ffffff 0, #ffffff 10%, #ffffff 20%, #fffff7 30%, #ffffef 40%, #f9ede4 50%, #dfdbd9 60%, #c7ccce 70%, #b1bfc4 80%, #9eb5bb 90%, #8fadb2 100%);
+    //background-color: #FFFAFA;
 }
 
 .app{
