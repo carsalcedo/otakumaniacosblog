@@ -4,6 +4,8 @@ import React, { useState } from 'react'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../context/authContext';
+import { useContext } from 'react';
 
 const Write = () => {
 
@@ -12,8 +14,11 @@ const Write = () => {
   const [title, setTitle] = useState(state?.description || '');
   const [file, setFile] = useState(null);
   const [categories, setCategories] = useState(state?.categories || '');
+  const {currentUser} = useContext(AuthContext);
 
   const navigate = useNavigate();
+
+  if(!currentUser) return navigate("/");
 
   const upload = async () =>{
     try{
