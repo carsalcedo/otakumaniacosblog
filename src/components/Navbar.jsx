@@ -47,7 +47,7 @@ const Navbar = () => {
             <h6>Eventos</h6>
           </Link>
           <Link className='link' to="/?categories=show">
-            <h6>shows</h6>
+            <h6>Shows</h6>
           </Link>
           <Link className='link' to="/?categories=concurso">
             <h6>Concursos</h6>
