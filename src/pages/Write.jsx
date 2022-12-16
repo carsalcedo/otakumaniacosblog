@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/authContext';
 import { useContext } from 'react';
 
+
 const Write = () => {
 
   const state = useLocation().state

@@ -13,6 +13,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./style.scss";
 import "./responsive.scss";
+import axios from "axios";
+
+axios.defaults.baseURL = "https://otakumaniacosblogapi.up.railway.app/api/"
 
 const Layout = () =>{
   return(
