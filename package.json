@@ -40,5 +40,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "otakumaniacosblogapi.up.railway.app/api/"
+  "proxy": "https://otakumaniacosblogapi.up.railway.app/api/"
+  
 }
