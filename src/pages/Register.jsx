@@ -64,10 +64,10 @@ const Register = () => {
                 <span>¿ya tienes una cuenta? <Link className='registerLink' to="/login">Login</Link></span>
 
                 <div className="socialLinks">
-                  <a href="https://www.facebook.com/groups/688859478835318" target="_blank"><div className="circle"><i className="fab fa-facebook-f"></i></div></a>
-                  <a href="https://www.facebook.com/groups/688859478835318" target="_blank"><div className="circle"><i className="fab fa-instagram"></i></div></a>
-                  <a href="https://www.facebook.com/groups/688859478835318" target="_blank"><div className="circle"><i className="fa-brands fa-pinterest-p"></i></div></a>
-                  <a href="https://www.facebook.com/groups/688859478835318" target="_blank"><div className="circle"><i className="fab fa-twitter"></i></div></a>
+                  <a href="https://www.facebook.com/groups/688859478835318" rel="noopener noreferrer" target="_blank"><div className="circle"><i className="fab fa-facebook-f"></i></div></a>
+                  <a href="https://www.facebook.com/groups/688859478835318" rel="noopener noreferrer" target="_blank"><div className="circle"><i className="fab fa-instagram"></i></div></a>
+                  <a href="https://www.facebook.com/groups/688859478835318" rel="noopener noreferrer" target="_blank"><div className="circle"><i className="fa-brands fa-pinterest-p"></i></div></a>
+                  <a href="https://www.facebook.com/groups/688859478835318" rel="noopener noreferrer" target="_blank"><div className="circle"><i className="fab fa-twitter"></i></div></a>
                 </div>
             </form>
           

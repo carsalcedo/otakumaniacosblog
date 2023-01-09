@@ -1,24 +1,20 @@
 import React from 'react'
-import { Link, useLocation, useNavigate  } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import moment from 'moment'
-import Edit from "../img/editar.png"
-import Delete from "../img/borrar.png"
 import Menu from '../components/Menu'
-import { useContext } from 'react'
-import { AuthContext } from '../context/authContext'
+
 
 const Single = () => {
   const [post, setPost] = useState({})
 
   const location = useLocation()
-  const navigate = useNavigate()
 
   const postId = location.pathname.split("/")[2];
 
-  const {currentUser} = useContext(AuthContext)
+ 
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,14 +28,6 @@ const Single = () => {
     fetchData();
   }, [postId]);
 
-  const handleDelete = async () =>{
-    try {
-      await axios.delete(`/posts/${postId}`);
-      navigate("/")
-    } catch (err) {
-      console.log(err);
-    }
-  }
 
   const getText = (html) =>{
     const doc = new DOMParser().parseFromString(html, "text/html")
@@ -56,17 +44,10 @@ const Single = () => {
             <span>{post.username}</span>
             <p>Posteó {moment(post.date).fromNow()}</p>
           </div>
-            {currentUser.username === post.username && <div className="edit">
-            <Link to={'/write?edit=2'} state={post}>
-              <img src={Edit} alt="" />
-            </Link>
-            <img onClick={handleDelete} src={Delete} alt="" />
-          </div>}
         </div>
         <h1>{post.title}</h1>
         <p>
           {getText(post.description)}
-          
         </p>
 
       </div>
@@ -76,5 +57,3 @@ const Single = () => {
 }
 
 export default Single
-
-//quede en el minuto 39

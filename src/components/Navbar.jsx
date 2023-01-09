@@ -1,15 +1,10 @@
 import Logo from "../img/logo.png"
-import { Link, useNavigate } from 'react-router-dom'
-import { useContext } from 'react';
-import { AuthContext } from '../context/authContext';
+import { Link } from 'react-router-dom'
 import { useState } from "react";
 
 const Navbar = () => {
 
-  const {currentUser, logout} = useContext(AuthContext);
   const [nav, setNav] = useState(false);
-
-  const navigate = useNavigate();
 
   const changeB = () =>{
     if(window.scrollY >= 80){
@@ -21,15 +16,6 @@ const Navbar = () => {
 
   window.addEventListener('scroll', changeB)
 
-  const handleSubmit = async e =>{
-    e.preventDefault()
-    try {
-      await logout()
-      navigate("/")
-    } catch (err) {
-        console.log(err)
-    }  
-}
 
   return (
     <div className={nav ? "navbarActive" : "navbar"}>
@@ -61,20 +47,12 @@ const Navbar = () => {
         </div>
 
         <div className='links'>
-          <span>{currentUser?.username}</span>
-          {currentUser 
-          ? (
-             <span onClick={handleSubmit}>Salir</span>) 
-          : 
-            (<Link className="link" to="/login">Iniciar</Link>
-          )}
-
-          {currentUser && 
-            <span className='write'>
-              <Link to="/write" className='link'>Postear</Link>
-            </span>
-          }
-          
+          <a href="https://www.facebook.com/groups/688859478835318" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.postimg.cc/QxhhkbXW/face.png" alt="otakumaniacos" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="https://i.postimg.cc/dQ8JyXKY/insta.png" alt="otakumaniacos" />
+          </a>
         </div>
         
       </div>
