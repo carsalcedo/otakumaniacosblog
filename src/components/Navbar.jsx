@@ -50,7 +50,7 @@ const Navbar = () => {
           <a href="https://www.facebook.com/groups/688859478835318" target="_blank" rel="noopener noreferrer">
             <img src="https://i.postimg.cc/QxhhkbXW/face.png" alt="otakumaniacos" />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/otakumaniacoscna/?hl=es" target="_blank" rel="noopener noreferrer">
             <img src="https://i.postimg.cc/dQ8JyXKY/insta.png" alt="otakumaniacos" />
           </a>
         </div>
